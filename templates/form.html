@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Covid-19 data by county</title>
+</head>
+<body>
+
+  <h1>Welcome to the Covid-19 data center!</h1>
+  <img src="/static/covid.jpg" width = "500">
+  <form action='/results' method='POST'>
+  <p>
+    In this website, you can search covid-19 data by county as you want based on several filters below.
+  </p>
+  <p>
+  Covid-19 data sort in: <br/>
+      <input type='radio' name='type'
+                value='deathrate' checked='checked'/> Death rate by county <br/>
+      <input type='radio' name='type'
+                value='caserate'/> Infection rate by county <br/>
+      <input type='radio' name='type'
+                value='vacrate'/> Vaccination rate by county <br/>
+  </p>
+
+  <p>
+    State: (enter a postal abbreviation. If you want the data from the whole country, enter ALL) <input name = 'state' type = "text"/><br/>
+  </p>
+
+  <p>
+  Size of counties: <br/>
+      <input type='radio' name='size'
+                value='small' checked='checked'/> Population below 5000 <br/>
+      <input type='radio' name='size'
+                value='middle'/> Population from 5000 to 100000 <br/>
+      <input type='radio' name='size'
+                value='large'/> Population above 100000 <br/>
+      <input type='radio' name='size'
+                value='sizeall'/> All counties <br/>
+  </p>
+
+  <p>
+  Minority rate: <br/>
+      <input type='radio' name='minority'
+                value='low' checked='checked'/> Low minority rate (10% below) <br/>
+      <input type='radio' name='minority'
+                value='medium'/> Medium minority rate (10% to 50%) <br/>
+      <input type='radio' name='minority'
+                value='high'/> High minority rate (50% above) <br/>
+      <input type='radio' name='minority'
+                value='minall'/> All counties <br/>
+  </p>
+
+
+  <input type='submit' value='Search'/>
+  </form>
+
+</body>
+</html>
